@@ -1,4 +1,4 @@
-## Study of HTTP protocol used in distributed systemns
+## Study of HTTP protocol used in distributed systems.
 
 Study of HTTP protocol used in distributed systemns. Implementation of connection between client and server using HTTP methods.
 

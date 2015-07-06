@@ -3,15 +3,21 @@
 > A distributed system is a collection of independent computers that
 > appears to its users as a single coherent system.
 
-
 **Profesor** : Dumitru Ciorba: 
 
 dumitru.ciorba@ati.utm.md
 
+### Laboratory Works
+
+- Lab#1 - [Git: Distributed revision control systems.](https://github.com/noku/university/tree/master/PAD/Lab%231#git-distributed-revision-control-systems)
+- Lab#2 - [Building a simple distributed system.](https://github.com/noku/university/tree/master/PAD/Lab%232#building-a-distributed-system)
+- Lab#3 - [Study of HTTP protocol used in distributed systems.](https://github.com/noku/university/tree/master/PAD/Lab%233#study-of-http-protocol-used-in-distributed-systems)
+- Lab#4,5 - [Processing and distribution of xml and json data.](https://github.com/noku/university/tree/master/PAD/Lab%234%2C5#processing-and-distribution-of-xml-and-json-data)
+- Lab#6 - [Building a Proxy with Shared Databases.](https://github.com/noku/university/tree/master/PAD/Lab%236#building-a-proxy-with-shared-databases)
 
 ### Installation
 
-Each laboratory work contains an executable `script.sh` file that will prepare the demonstration of working system.
+Almost each laboratory work contains an executable `script.sh` file that will prepare the demonstration of working system.
 
 ```sh
 $ ./script.sh
