@@ -1,0 +1,6 @@
+user:
+  edit: Modifier l'utilisateur
+  name: Nom d'utilisateur est %1
+  count: !!pl
+    1: Il y a 1 utilisateur
+    n: Il y a %1 utilisateur
