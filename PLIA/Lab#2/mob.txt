@@ -1,0 +1,156 @@
+Mobile
+
+1. Acer
+2. Samsung 
+3. Apple
+4. ASUS
+5. Fly
+6. HTC
+7. Huawei
+8. Sony
+9. Lenovo
+10. LG
+11. Nokia
+12. Philips
+
+1. Sistem de operare
+    1. Ios
+    2. Android
+    3. Windows
+
+1. Acer                 9
+2. Samsung        9
+3. Apple               1
+4. ASUS               9
+5. Fly                    9
+6. HTC                  9
+7. Huawei           9
+8. Sony                9
+9. Lenovo           9
+10. LG                  9
+11. Nokia            1
+12. Philips          1
+
+2. Dimensiuni ecran este mai mare
+    1. mare
+    2. medium
+    3. mica
+
+1. Acer                 4
+2. Samsung        7
+3. Apple               8
+4. ASUS               9
+5. Fly                    2
+6. HTC                  8
+7. Huawei           9
+8. Sony                9
+9. Lenovo           6
+10. LG                  6
+11. Nokia            3
+12. Philips          3
+
+3. Ecran tactil:
+    1. Da
+    2. Nu
+
+1. Acer                 4
+2. Samsung        7
+3. Apple               8
+4. ASUS               7
+5. Fly                    2
+6. HTC                  8
+7. Huawei           3
+8. Sony                8
+9. Lenovo           6
+10. LG                  6
+11. Nokia            3
+12. Philips          3
+
+
+4. WiFi, GPRS
+    1. Da
+    2. Nu
+
+1. Acer                 6
+2. Samsung        8
+3. Apple               8
+4. ASUS               4
+5. Fly                    3
+6. HTC                  8
+7. Huawei           3
+8. Sony                8
+9. Lenovo           6
+10. LG                  7
+11. Nokia            6
+12. Philips          3
+
+5. Calitatea photo  este
+    1.  maxima
+    2. medium
+    3. minima
+
+1. Acer                 3
+2. Samsung        7
+3. Apple               7
+4. ASUS               4
+5. Fly                    3
+6. HTC                  8
+7. Huawei           3
+8. Sony                8
+9. Lenovo           6
+10. LG                  7
+11. Nokia            6
+12. Philips          4
+
+6. Memorie internă
+    1. 5GB
+    2. 8GB
+    3. 16GB
+
+1. Acer                 7
+2. Samsung        6
+3. Apple               8
+4. ASUS               3
+5. Fly                    3
+6. HTC                  3
+7. Huawei           6
+8. Sony                6
+9. Lenovo           4
+10. LG                  6
+11. Nokia            6
+12. Philips          5
+
+7. Radio
+    1. Da
+    2. Nu
+
+1. Acer                 2             
+2. Samsung        4
+3. Apple               3
+4. ASUS               6
+5. Fly                    6
+6. HTC                  5
+7. Huawei           8
+8. Sony                6
+9. Lenovo           4
+10. LG                  6
+11. Nokia            9
+12. Philips          6
+
+
+8. Capacitate acumulator
+    1. Mare
+    2. Mica
+
+1. Acer                 8             
+2. Samsung        7
+3. Apple               6
+4. ASUS               8
+5. Fly                    7
+6. HTC                  8
+7. Huawei           6
+8. Sony                7
+9. Lenovo           9
+10. LG                  6
+11. Nokia            9
+12. Philips          6   
