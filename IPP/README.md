@@ -13,10 +13,10 @@ software applications, also about TDD and BDD.
 
 ### Laboratory Works
 
-- Lab#1 - [99 Bottles of Beer]()
-- Lab#2 - [Curl for humans]()
-- Lab#3 - [Image Downloader]()
-- Lab#4 - [Parser]()
+- Lab#1 - [99 Bottles of Beer](https://github.com/noku/university/tree/master/IPP/Lab%231#99-bottles-of-beer)
+- Lab#2 - [Curl for humans](https://github.com/noku/university/tree/master/IPP/Lab%232#curl-for-humans)
+- Lab#3 - [Image Downloader](https://github.com/noku/university/tree/master/IPP/Lab%233#image-downloader)
+- Lab#4 - [Parser](https://github.com/noku/university/tree/master/IPP/Lab%234#laboratory-work-4)
 
 ### Description
 
