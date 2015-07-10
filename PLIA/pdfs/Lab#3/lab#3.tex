@@ -1,0 +1,460 @@
+%----------------------------------------------------------------------------------------
+% PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+  \documentclass[12pt]{article}
+
+  \usepackage{hyperref}
+  \usepackage{fancyhdr} % Required for custom headers
+  \usepackage{lastpage} % Required to determine the last page for the footer
+  \usepackage{extramarks} % Required for headers and footers
+  \usepackage[usenames,dvipsnames]{color} % Required for custom colors
+  \usepackage{graphicx} % Required to insert images
+  \usepackage{listings} % Required for insertion of code
+  \usepackage{courier} % Required for the courier font
+  \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+  \usepackage{wrapfig}
+  \usepackage{color}
+  \usepackage{lscape}
+
+  \setlength\parindent{0pt} % Removes all indentation from paragraphs
+  \renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the itemize environment by letter rather than number (e.g. section 6)
+
+  % Margins
+  \topmargin=-0.7in
+  \evensidemargin=0.2in
+  \oddsidemargin=-0.2in
+  \textwidth=7.0in
+  \textheight=9.0in
+  % \headsep=0.25in
+
+  % \linespread{1.1} % Line spacing
+
+  \definecolor{dkgreen}{rgb}{0,0.6,0}
+  \definecolor{gray}{rgb}{0.5,0.5,0.5}
+  \definecolor{mauve}{rgb}{0.58,0,0.82}
+  \definecolor{greyish}{rgb}{0.96,0.96,0.96}
+
+  \lstset{
+    backgroundcolor=\color{greyish},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+    frame=tblr,
+    numbers=left,                       % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                   % how far the line-numbers are from the code
+    numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+    language=Prolog,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\footnotesize\ttfamily},
+    numbers=none,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    breaklines=true,
+    breakatwhitespace=true
+    tabsize=3
+  }
+
+  \begin{document}
+  \begin{titlepage}
+
+%----------------------------------------------------------------------------------------
+% TITLE PAGE INFORMATION
+%----------------------------------------------------------------------------------------
+ \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+  \begin{center} % Center everything on the page
+
+  %----------------------------------------------------------------------------------------
+  % HEADING SECTIONS
+  %----------------------------------------------------------------------------------------
+  \textsc{\large Faculty of Computers, Informatics and Microelectronics}\\[0.5cm]
+  \textsc{\large Technical University of Moldova}\\[1.2cm] % Name of your university/college
+  \vspace{35 mm}
+  \textsc{\Large PLIA}\\[0.5cm] % Major heading such as course name
+  %\textsc{\large Laboratory work \#1-3}\\[0.5cm] % Minor heading such as course title
+  \textsc{\large Laboratory work \# 3}\\[0.5cm] % Minor heading such as course title
+
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %----------------------------------------------------------------------------------------
+  \vspace{10 mm}
+  \HRule \\[0.4cm]
+  { \Large \bfseries Expert system in Prolog. }\\[0.4cm] % Title of your document
+  \HRule \\[1.5cm]
+
+  %----------------------------------------------------------------------------------------
+  % AUTHOR SECTION
+  %----------------------------------------------------------------------------------------
+      \vspace{30mm}
+
+      \begin{minipage}{0.4\textwidth}
+      \begin{flushleft} \large
+      \emph{Author:}\\
+      Petru \textsc{Negrei} % Your name
+      \end{flushleft}
+      \end{minipage}
+      ~
+      \begin{minipage}{0.4\textwidth}
+      \begin{flushright} \large
+      \emph{Supervisor:} \\
+      L. \textsc{Luchianov} % Supervisor's Name
+      \end{flushright}
+      \end{minipage}\\[4cm]
+
+      \vspace{5 mm}
+      % If you don't want a supervisor, uncomment the two lines below and remove the section above
+      %\Large \emph{Author:}\\
+      %John \textsc{Smith}\\[3cm] % Your name
+
+      %----------------------------------------------------------------------------------------
+      % DATE SECTION
+      %----------------------------------------------------------------------------------------
+
+      {\large January 2015}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+      %----------------------------------------------------------------------------------------
+      % LOGO SECTION
+      %----------------------------------------------------------------------------------------
+
+      %\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+
+      %----------------------------------------------------------------------------------------
+
+      \vfill % Fill the rest of the page with whitespace
+      \end{center}
+      \end{titlepage}
+
+      \newpage
+      \tableofcontents
+      \newpage
+
+%----------------------------------------------------------------------------------------
+% Introduction
+%----------------------------------------------------------------------------------------
+
+  \section{Introduction}
+
+  \subsection{Topic}
+
+   The aim is to study the design principles and organizing logic based expert systems rules.
+
+  \subsection{Tasks}
+
+    Based on material from the course and the examples of expert system discussed below study implementation of
+    both types of expert systems using Prolog. 
+
+    Developing an expert system for a specific area is selected in accordance with the number of the taks of Table, or any another area. 
+    The number of objects described should be at least 12,  and a description of their attributes, it less than 8. Review the realization of 
+    an expert system based on logic and expert system which is based the rules, deductive and inductive making mechanism.
+
+  \subsection{Report}
+
+  Report will containt a short description of work done, and will present necessary information
+  about tools, algorithms used or studied.
+
+%----------------------------------------------------------------------------------------
+% Implementation
+%----------------------------------------------------------------------------------------
+
+\section{Theory}
+    
+    \subsection{Definition}
+
+        \textbf{Expert System} (ES) is a program (software package) that simulates to some extent the activity of a
+         human expert in a particular field. Moreover, this area is strictly limited. 
+         The main goal of SE is to consult in the field for which it is designed.
+
+        An SE consists of three main components:
+
+        \begin{itemize}
+             \item \textbf{Knowledge Base} (BC). BC - the central part of the expert system. It contains a collection of facts and knowledge (rules) for extracting other knowledge. 
+             The information contained in the knowledge base used by SE to determine the response during the consultation. Usually, BC are separate from the main program or other fixed assets.
+             \item  \textbf{The mechanism (motor) inference.} MI contains descriptions of the application of knowledge contained in the knowledge base. During the consultation, MI SE starts working, meeting rules determine the acceptability of the solution found and forward the results to the system interface (System User Interface).
+             \item  \textbf{User System Interface} (HPI) is part of the SE, which interacts with the user. ISU functions include: receiving information from the user, the transfer results in the most convenient form of user explain the results received from SE (provides information on achieving results).
+       \end{itemize}
+
+      \subsection{Determining the outcome (response) expert} 
+
+        The conclusion means proof that the set of assumptions should work. Logic of 
+        obtaining response (conclusion) specified by the rules of inference. The conclusion (result) is
+        performed by searching and comparison of the model. \\ \\
+         
+        In SE, rule-based questions (goals) the user is converted into a form that is
+        comparable with the rules of the form BC. Inference Engine initiates the process of linking the rule
+        The "top" (top). Recourse to the rules is called "call". Calling the relevant rules in the
+        correlation continues as long as there was no comparison or BC is not exhausted, and no value
+        is found. If MI detects that you can call more than one rule, then start settlement process. 
+        In conflict resolution priority is given, usually rules which are more specific
+         or more rules to consider current data.
+
+  \section{Implementation}
+
+  The given task was implemented with the help of \textit{SYSEXP} softare fo generating \textit{Expert Systems.}
+  The following expert system is implemented to recommend the brand of the future mobile device
+   based on customer needs and preferences. \\
+
+  The following parameters were considered:
+
+   \begin{itemize}
+        \item  A range of 0 -10 where 0 indicates absolutely not and 10 indicates absolutely certain. 1-9 indicate degrees of certainty. \\
+        Whis means that for each of the proposed options will be assigned a value from 0 to 10, which will mean the compatibility with the question proposed.
+        I mean, if you have the value 10, the solution will be sought and the system will cease to look for other possible solutions, and if you have the value 0 - the system will cease
+        May to calculate the probability that element for this value, because it will not meet the criteria.
+        \item Attempt to apply all possible rules
+        The system will ask 12 most important questions that would help select the brand of mobile device. 
+        as needed ofr preferences. These questions are offered two possible answers. The first variant will be treated condition "THEN" and the second variant in condition "ELSE." 
+    \end{itemize}
+    \vspace{0.5cm}
+    \begin{minipage}[b]{0.5\linewidth}
+    \begin{itemize}
+        \item  Acer
+        \item  Samsung
+        \item  Apple
+        \item  ASUS
+        \item  Fly
+        \item  HTC
+    \end{itemize}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{itemize}
+        \item  Huawei
+        \item  Sony
+        \item  Lenovo
+        \item  LG
+        \item  Nokia
+        \item  Philips
+    \end{itemize}
+  \end{minipage}
+    
+    \vspace{0.5cm}
+
+    Due to the fact that a special tool is used to create an expert system there is no code to be shown.
+    SYSEXP has a rich menu to create and edit different rules and macros to reuse qualifiers or edit
+    delete rules. Below is shown an example of a defined rule and the options for that rule. \\
+
+    \section{Results}
+
+      \vspace{0.5cm}
+        
+  \begin{minipage}[b]{1.0\linewidth}
+    \begin{center}
+      \includegraphics[width=0.7\textwidth]{a}
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.5cm}
+
+  \begin{minipage}[b]{1.0\linewidth}
+    \begin{center}
+      \includegraphics[width=0.7\textwidth]{b}
+      \\ Program intro
+    \end{center}
+  \end{minipage}
+
+  \newpage
+
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{c1}
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{c2}
+    \end{center}
+  \end{minipage}
+
+    \vspace{0.5cm}
+
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{c3}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{c4}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.5cm}
+
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{d1}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{d2}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.2cm}
+
+  \begin{minipage}[b]{1.0\linewidth}
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{d3}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.5cm}
+
+
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{e1}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{e2}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.2cm}
+
+  \begin{minipage}[b]{1.0\linewidth}
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{h3}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.5cm}
+
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{f1}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{f2}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.2cm}
+
+  \begin{minipage}[b]{1.0\linewidth}
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{f3}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.5cm}
+
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{g1}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{g2}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.2cm}
+
+  \begin{minipage}[b]{1.0\linewidth}
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{g3}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.5cm}
+
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{h1}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{h2}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.2cm}
+
+  \begin{minipage}[b]{1.0\linewidth}
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{h3}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.5cm}
+
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{i1}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+  \begin{minipage}[b]{0.5\linewidth}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{i2}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.2cm}
+
+  \begin{minipage}[b]{1.0\linewidth}
+    \begin{center}
+      \includegraphics[width=0.5\textwidth]{i3}
+      % \\ Option selection
+    \end{center}
+  \end{minipage}
+
+  \vspace{0.5cm}
+
+  \vspace{0.8cm}
+
+  \begin{minipage}[b]{1.0\linewidth}
+    \begin{center}
+      \includegraphics[width=0.8\textwidth]{R}
+      \\ Results
+    \end{center}
+  \end{minipage}
+
+  \newpage
+
+    \section{Conclusion} % (fold)
+    \label{sec:conclusion}
+
+    Following this laboratory made the acquaintance of one of the most important features of IA allows us build your own system based on expert knowledge base and its own rules.
+    In laboratory condition was specified the construction of this system using Turbo Prolog environment, but after I studied how SYSEXP done this, I wanted more to achieve it 
+    through this system. Initially we introduced variants of solutions to be certetate then each rule (10 in total) were introduced into the system and for each of them, 
+    the solutions were assigned a certain probability depending on user response. \\ 
+
+    SYSEXP exciting look to build an expert system because it has a more familiar graphical interface and initially when familiarizing yourself 
+    with something new, it offers several advantages for understanding. \\ 
+
+    Implementing an expert system with the help of specialized program offfers the speed and 
+    easiness, in the case of writing code is more complex using prolog. The program abstract
+    the programming implementation and allow programmer to create, run and test an expert 
+    system faster, thus allowing the person to focus only on logic and how to create a good experst
+    system leaving details behind. \\ \\ 
+
+
+\end{document}

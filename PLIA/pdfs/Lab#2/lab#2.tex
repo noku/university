@@ -1,0 +1,297 @@
+%----------------------------------------------------------------------------------------
+% PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+  \documentclass[12pt]{article}
+
+  \usepackage{hyperref}
+  \usepackage{fancyhdr} % Required for custom headers
+  \usepackage{lastpage} % Required to determine the last page for the footer
+  \usepackage{extramarks} % Required for headers and footers
+  \usepackage[usenames,dvipsnames]{color} % Required for custom colors
+  \usepackage{graphicx} % Required to insert images
+  \usepackage{listings} % Required for insertion of code
+  \usepackage{courier} % Required for the courier font
+  \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+  \usepackage{wrapfig}
+  \usepackage{color}
+  \usepackage{lscape}
+
+  \setlength\parindent{0pt} % Removes all indentation from paragraphs
+  \renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the itemize environment by letter rather than number (e.g. section 6)
+
+  % Margins
+  \topmargin=-0.7in
+  \evensidemargin=0.2in
+  \oddsidemargin=-0.2in
+  \textwidth=7.0in
+  \textheight=9.0in
+  % \headsep=0.25in
+
+  % \linespread{1.1} % Line spacing
+
+  \definecolor{dkgreen}{rgb}{0,0.6,0}
+  \definecolor{gray}{rgb}{0.5,0.5,0.5}
+  \definecolor{mauve}{rgb}{0.58,0,0.82}
+  \definecolor{greyish}{rgb}{0.96,0.96,0.96}
+
+  \lstset{
+    backgroundcolor=\color{greyish},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+    frame=tblr,
+    numbers=left,                       % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                   % how far the line-numbers are from the code
+    numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+    language=Prolog,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\footnotesize\ttfamily},
+    numbers=none,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    breaklines=true,
+    breakatwhitespace=true
+    tabsize=3
+  }
+
+  \begin{document}
+  \begin{titlepage}
+
+%----------------------------------------------------------------------------------------
+% TITLE PAGE INFORMATION
+%----------------------------------------------------------------------------------------
+ \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+  \begin{center} % Center everything on the page
+
+  %----------------------------------------------------------------------------------------
+  % HEADING SECTIONS
+  %----------------------------------------------------------------------------------------
+  \textsc{\large Faculty of Computers, Informatics and Microelectronics}\\[0.5cm]
+  \textsc{\large Technical University of Moldova}\\[1.2cm] % Name of your university/college
+  \vspace{35 mm}
+  \textsc{\Large PLIA}\\[0.5cm] % Major heading such as course name
+  %\textsc{\large Laboratory work \#1-3}\\[0.5cm] % Minor heading such as course title
+  \textsc{\large Laboratory work \# 2}\\[0.5cm] % Minor heading such as course title
+
+  %----------------------------------------------------------------------------------------
+  % TITLE SECTION
+  %----------------------------------------------------------------------------------------
+  \vspace{10 mm}
+  \HRule \\[0.4cm]
+  { \large \bfseries Acquiring ideas about specific mechanisms of Prolog }\\[0.4cm] % Title of your document
+  \HRule \\[1.5cm]
+
+  %----------------------------------------------------------------------------------------
+  % AUTHOR SECTION
+  %----------------------------------------------------------------------------------------
+      \vspace{30mm}
+
+      \begin{minipage}{0.4\textwidth}
+      \begin{flushleft} \large
+      \emph{Author:}\\
+      Petru \textsc{Negrei} % Your name
+      \end{flushleft}
+      \end{minipage}
+      ~
+      \begin{minipage}{0.4\textwidth}
+      \begin{flushright} \large
+      \emph{Supervisor:} \\
+      L. \textsc{Luchianov} % Supervisor's Name
+      \end{flushright}
+      \end{minipage}\\[4cm]
+
+      \vspace{5 mm}
+      % If you don't want a supervisor, uncomment the two lines below and remove the section above
+      %\Large \emph{Author:}\\
+      %John \textsc{Smith}\\[3cm] % Your name
+
+      %----------------------------------------------------------------------------------------
+      % DATE SECTION
+      %----------------------------------------------------------------------------------------
+
+      {\large December 2014}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+      %----------------------------------------------------------------------------------------
+      % LOGO SECTION
+      %----------------------------------------------------------------------------------------
+
+      %\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+
+      %----------------------------------------------------------------------------------------
+
+      \vfill % Fill the rest of the page with whitespace
+      \end{center}
+      \end{titlepage}
+
+      % \newpage
+      % \tableofcontents
+      % \newpage
+
+%----------------------------------------------------------------------------------------
+% Introduction
+%----------------------------------------------------------------------------------------
+
+  \section{Introduction}
+
+  \subsection{Topic}
+
+   Acquiring ideas about specific mechanisms of Prolog
+
+  \subsection{Tasks}
+
+  1. Launch the execution work program established in laboratory work 1 and investigated changes:
+
+  \begin{itemize}
+    \item By changing the order of sentences facts;
+    \item By changing the order of sentences rules; (two versions)
+    \item By changing the order of sentences facts; (two versions)
+    \item Make conclusions.
+  \end{itemize}
+
+  \vspace{0.5cm}
+
+  2. Solve the following problems proposed and will follow their proper implementation.
+  
+  \begin{itemize}
+    \item Develop and test a program to determine a minimum value of two numbers (X and Y), without using predicate cut.
+    \item Develop and test a program to determine a minimum value of two numbers (X and Y), using red and green cut predicates.
+    \item What will be the program answers to given task, do a comparative analysis between predicates using the knowledge base cut in space and space purposes.
+    \item Two children play a game in a tennis tournament if they have the same age. Whether subsequent children and their ages: \\
+        \textbf{child (peter, 9). child (paul, 10). child (chris, 9). child (sesame, 9). } \\ 
+     Define a predicate which shows all pairs of children who can play a game in a tennis tournament.
+  \end{itemize}
+
+ 3. Enter the appropriate changes in the program (2.1), using green cut at least two rules in the knowledge base. \\ 
+
+ 4. Enter the appropriate changes in the program (2.1), using red cut rules in the knowledge base. Write conclusions.
+
+  \subsubsection{Report}
+
+  Report will containt a short description of work done, and will present necessary information
+  about tools, algorithms used or studied.
+
+%----------------------------------------------------------------------------------------
+% Implementation
+%----------------------------------------------------------------------------------------
+
+  \section{Implementation}
+
+  \subsection{}
+      
+  \subsubsection{}
+  
+  After changing the order of rules I observed that no changes occur in the program, but 
+  when I changed the order of facts, I noticed that it changes the order of the showed results.
+
+  Thus when changing the rules we change the order in which the results will appear to the user.
+
+  \subsection{}
+
+  \subsubsection{}
+
+    Develop and test a program to determine a minimum value of two numbers (X and Y), without using predicate cut.
+  
+    \begin{lstlisting}
+    min(X,Y,X):- X =< Y.
+    min(X,Y,Y):- X > Y.
+    \end{lstlisting}
+
+    \subsubsection{}
+
+    Develop and test a program to determine a minimum value of two numbers (X and Y), using cut cut predicate red and green.
+
+    \begin{lstlisting}
+    % green cut
+    min(X, Y, X) :- X =< Y, !.
+    min(X, Y, Y) :- X > Y.
+    \end{lstlisting}
+
+    \begin{lstlisting}
+    % red cut
+    min(X, Y, X) :- X =< Y, !. 
+    min(X, Y, Y).
+    \end{lstlisting}
+
+    \subsubsection{}
+
+    What will be the program answers to given task, do a comparative analysis between predicates using the knowledge base cut in space and space purposes \\
+   
+      In the first case of \textbf{p(X)}. we have the following answers: \textbf{X = 1; X = 2}. We have the answers because it enters in backtraking and check all the time 
+      until it reaches the clause p(2): - !. and stops because the cut predicate was used, which ignores the responses that follow. \\
+
+      For the purposes of \textbf{p(X), p(Y).} the answers will be: \\
+
+      X = Y, Y = 1; \\
+      X = 1, Y = 2; \\
+      X = 2, Y = 1; \\
+      X = Y, Y = 2. \\
+
+      For the purposes of \textbf{p(X),!,p(Y).} because of cut the answers will be: \\
+
+      X = Y, Y = 1; \\
+      X = 1, Y = 2, 
+
+      \subsubsection{}
+
+     Two children play a game in a tennis tournament if they have the same age. Whether subsequent children and their ages: \\
+
+    \begin{lstlisting}
+    child(peter, 9). 
+    child(paul, 10). 
+    child(chris, 9). 
+    child(sesame, 9).
+    \end{lstlisting}
+
+     Define a predicate which shows all pairs of children who can play a game in a tennis tournament.
+
+    \begin{lstlisting}
+    perechi(A,B,C):-copil(A,C),copil(B,C) ,A @<B, !.
+    \end{lstlisting}
+
+
+    \subsection{List}
+        
+    Write a predicate called \textit{descomp(N, Lista)} witch will receive an integer number N and 
+    return a list of prime facotors of this number.
+
+    \begin{lstlisting}
+    % Determine the prime factors of a given positive integer. 
+
+    % descomp(N, L) :-  L is the list of prime factors of N.
+    %    (integer,list) (+,?)
+
+    descomp(N,L) :- N > 0,  descomp(N,L,2).
+
+    % descomp(N,L,K) :- L is the list of prime factors of N. It is 
+    % known that N does not have any prime factors less than K.
+    
+    descomp(1,[],_) :- !.
+    descomp(N,[F|L],F) :-   % N is multiple of F
+       R is N // F, N =:= R * F, !, descomp(R,L,F).
+    descomp(N,L,F) :- 
+       next_factor(N,F,NF), descomp(N,L,NF).        % N is not multiple of F
+       
+    % next_factor(N,F,NF) :- when calculating the prime factors of N
+    %    and if F does not divide N then NF is the next larger candidate to
+    %    be a factor of N.
+
+    next_factor(_,2,3) :- !.
+    next_factor(N,F,NF) :- F * F < N, !, NF is F + 2.
+    next_factor(N,_,N).                                 % F > sqrt(N)
+    \end{lstlisting}
+
+
+    \section{Conclusion}
+    \label{sec:conclusion}
+
+    As a result of this laboratory work I analyzed theoretical material and became acquainted with some features of Prolog. 
+    In carrying out the work there have been solved some problems with using predicate cut red and green.
+    After solving can say that the use of the green cut increase the efficiency of the program, also the use of 
+    the clauses use the order does not matter, the result will not depend on it. 
+    When using red cut it changes procedural significance of the program, in case the order is changed clauses will have an incorrect result.
+
+
+\end{document}
